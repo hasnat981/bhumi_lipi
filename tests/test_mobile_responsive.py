@@ -5,7 +5,13 @@ Tests 360px, 390px, and 412px viewports across all screens:
 - Nothing obscured behind the fixed bottom tab bar
 """
 import os, sys, unittest
-from playwright.sync_api import sync_playwright
+
+try:
+    from playwright.sync_api import sync_playwright
+    HAS_PLAYWRIGHT = True
+except ImportError:
+    sync_playwright = None
+    HAS_PLAYWRIGHT = False
 
 BASE = os.environ.get("BASE", "http://127.0.0.1:8000")
 VIEWPORTS = [
@@ -30,6 +36,7 @@ ROUTES = [
 ]
 
 
+@unittest.skipUnless(HAS_PLAYWRIGHT, "playwright is not installed (pip install -r requirements-dev.txt)")
 class TestMobileResponsive(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
