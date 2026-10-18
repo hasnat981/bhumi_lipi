@@ -12,3 +12,8 @@ scratch
 data/*.db
 tests
 docs
+.env*
+-files .env
+tatus --short
+keys/
+demo_files/

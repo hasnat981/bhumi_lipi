@@ -3,7 +3,11 @@ __pycache__/
 data/*.db
 keys/
 .env
+.env*
+-files .env
+tatus --short
 node_modules/
 .DS_Store
 scratch/
 *.zip
+demo_files/

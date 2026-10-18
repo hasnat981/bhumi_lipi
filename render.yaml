@@ -15,5 +15,7 @@ services:
         value: /tmp/bhumi.db
       - key: PORT
         value: 8000
+      - key: PYTHONPATH
+        value: .
       - key: GEMINI_API_KEY
         sync: false
