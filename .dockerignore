@@ -1,0 +1,14 @@
+.git
+.gitignore
+.github
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+scratch
+*.zip
+.agent
+data/*.db
+tests
+docs

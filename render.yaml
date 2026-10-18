@@ -1,0 +1,19 @@
+# One-click deploy on Render (free plan, Docker runtime). The demo database is rebuilt from seed data on every start.
+services:
+  - type: web
+    name: bhumi-lipi
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    envVars:
+      - key: BHUMI_MASTER_B64      # signing master secret (random, created once by Render)
+        generateValue: true
+      - key: BHUMI_DB
+        value: /tmp/bhumi.db
+      - key: PORT
+        value: 8000
+      - key: GEMINI_API_KEY
+        sync: false

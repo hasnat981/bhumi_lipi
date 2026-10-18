@@ -1,0 +1,4 @@
+# Only needed for the browser test (tests/e2e_playwright.py). Run: playwright install chromium
+playwright>=1.45
+opencv-python-headless>=4.8
+numpy
