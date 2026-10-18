@@ -17,3 +17,4 @@ docs
 tatus --short
 keys/
 demo_files/
+*.egg-info/

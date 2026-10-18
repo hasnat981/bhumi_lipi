@@ -333,3 +333,11 @@ def main():
         httpd.serve_forever()
     except KeyboardInterrupt:
         print("bye")
+
+
+if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    main()
+

@@ -11,3 +11,4 @@ node_modules/
 scratch/
 *.zip
 demo_files/
+*.egg-info/
